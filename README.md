@@ -3,4 +3,5 @@
 Tech Used->Python
 Packages Used->numpy,pyplot,random
 Result
-![https://github.com/mihir1919/Tic-Tac-Toe/blob/master/Result.png](Result)
+![Result]
+(https://github.com/mihir1919/Tic-Tac-Toe/blob/master/Result.png)
