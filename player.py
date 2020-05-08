@@ -5,6 +5,7 @@ def create_board():
     return np.zeros((3,3))
 
 
+
 def place(board,player,position):
     if(board[position[0]][position[1]] == 0):
         board[position[0]][position[1]]=player
@@ -87,6 +88,8 @@ for i in range(1000):
     else:
         m1[l-1]+=1
 print(m1)
+from matplotlib import pyplot as plt
+
 def play_strategic_game():
     board=create_board()
     board[1][1]=1
@@ -97,14 +100,15 @@ def play_strategic_game():
     return evaluate(board)
 m2=[0,0,0]
 for i in range(1000):
-    l=play_game()
+    l=play_strategic_game()
     if(l==-1):
         m2[-1]+=1
     else:
         m2[l-1]+=1
 print(m2)
 minfo=['Player1','Player2','Draw']
-plt.plot(m1,minfo,'*')
-plt.plot(m2,minfo,'+')
+plt.plot(m1,minfo,"*",label="Random")
+plt.plot(m2,minfo,'+',label="Strategic")
+plt.legend()
 plt.xlabel('No of Times')
 plt.show()
